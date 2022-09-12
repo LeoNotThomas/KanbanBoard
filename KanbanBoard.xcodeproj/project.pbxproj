@@ -1,0 +1,790 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12FB5AA3C3796C5BE8FF6D1C /* Pods_KanbanBoard_KanbanBoardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 600F4DB74AA83D1507AA8D97 /* Pods_KanbanBoard_KanbanBoardUITests.framework */; };
+		3313190D28CF421A003E55F9 /* KanbanBoardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3313190C28CF421A003E55F9 /* KanbanBoardApp.swift */; };
+		3313190F28CF421A003E55F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3313190E28CF421A003E55F9 /* ContentView.swift */; };
+		3313191128CF421C003E55F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3313191028CF421C003E55F9 /* Assets.xcassets */; };
+		3313191428CF421C003E55F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3313191328CF421C003E55F9 /* Preview Assets.xcassets */; };
+		3313191E28CF421C003E55F9 /* KanbanBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3313191D28CF421C003E55F9 /* KanbanBoardTests.swift */; };
+		3313192828CF421C003E55F9 /* KanbanBoardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3313192728CF421C003E55F9 /* KanbanBoardUITests.swift */; };
+		3313192A28CF421C003E55F9 /* KanbanBoardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3313192928CF421C003E55F9 /* KanbanBoardUITestsLaunchTests.swift */; };
+		3313193728CF4455003E55F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3313193628CF4455003E55F9 /* GoogleService-Info.plist */; };
+		334098F828D2ED82000125E3 /* Kanban.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334098F728D2ED82000125E3 /* Kanban.swift */; };
+		334098FB28D2F3DE000125E3 /* Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334098FA28D2F3DE000125E3 /* Columns.swift */; };
+		334098FE28D3013D000125E3 /* JSONDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334098FD28D3013D000125E3 /* JSONDecode.swift */; };
+		3340990128D3034E000125E3 /* KanbanData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3340990028D3034E000125E3 /* KanbanData.json */; };
+		6C8E872D86ACCD00A5E32A61 /* Pods_KanbanBoardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1890EA29A6AB7C95E7D7B40 /* Pods_KanbanBoardTests.framework */; };
+		F1CDF75BDF4F640B32A612E1 /* Pods_KanbanBoard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51F10BDE8B2C43149239870 /* Pods_KanbanBoard.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3313191A28CF421C003E55F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3313190128CF421A003E55F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3313190828CF421A003E55F9;
+			remoteInfo = KanbanBoard;
+		};
+		3313192428CF421C003E55F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3313190128CF421A003E55F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3313190828CF421A003E55F9;
+			remoteInfo = KanbanBoard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		21DFBC48D3525416C57DB423 /* Pods-KanbanBoard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KanbanBoard.debug.xcconfig"; path = "Target Support Files/Pods-KanbanBoard/Pods-KanbanBoard.debug.xcconfig"; sourceTree = "<group>"; };
+		2CFB616650E2453ACFF2967F /* Pods-KanbanBoard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KanbanBoard.release.xcconfig"; path = "Target Support Files/Pods-KanbanBoard/Pods-KanbanBoard.release.xcconfig"; sourceTree = "<group>"; };
+		3313190928CF421A003E55F9 /* KanbanBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KanbanBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3313190C28CF421A003E55F9 /* KanbanBoardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanBoardApp.swift; sourceTree = "<group>"; };
+		3313190E28CF421A003E55F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3313191028CF421C003E55F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3313191328CF421C003E55F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3313191928CF421C003E55F9 /* KanbanBoardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KanbanBoardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3313191D28CF421C003E55F9 /* KanbanBoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanBoardTests.swift; sourceTree = "<group>"; };
+		3313192328CF421C003E55F9 /* KanbanBoardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KanbanBoardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3313192728CF421C003E55F9 /* KanbanBoardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanBoardUITests.swift; sourceTree = "<group>"; };
+		3313192928CF421C003E55F9 /* KanbanBoardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanBoardUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3313193628CF4455003E55F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		334098F728D2ED82000125E3 /* Kanban.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kanban.swift; sourceTree = "<group>"; };
+		334098FA28D2F3DE000125E3 /* Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Columns.swift; sourceTree = "<group>"; };
+		334098FD28D3013D000125E3 /* JSONDecode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecode.swift; sourceTree = "<group>"; };
+		3340990028D3034E000125E3 /* KanbanData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KanbanData.json; sourceTree = "<group>"; };
+		4655AF5FEDAF3D1F509DD112 /* Pods-KanbanBoardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KanbanBoardTests.release.xcconfig"; path = "Target Support Files/Pods-KanbanBoardTests/Pods-KanbanBoardTests.release.xcconfig"; sourceTree = "<group>"; };
+		600F4DB74AA83D1507AA8D97 /* Pods_KanbanBoard_KanbanBoardUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KanbanBoard_KanbanBoardUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91F456DBEB2DFA547C34CCD1 /* Pods-KanbanBoard-KanbanBoardUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KanbanBoard-KanbanBoardUITests.debug.xcconfig"; path = "Target Support Files/Pods-KanbanBoard-KanbanBoardUITests/Pods-KanbanBoard-KanbanBoardUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9D1CB411A0062A3E499A8740 /* Pods-KanbanBoardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KanbanBoardTests.debug.xcconfig"; path = "Target Support Files/Pods-KanbanBoardTests/Pods-KanbanBoardTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF97A6B251104D9FFF270DE1 /* Pods-KanbanBoard-KanbanBoardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KanbanBoard-KanbanBoardUITests.release.xcconfig"; path = "Target Support Files/Pods-KanbanBoard-KanbanBoardUITests/Pods-KanbanBoard-KanbanBoardUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E51F10BDE8B2C43149239870 /* Pods_KanbanBoard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KanbanBoard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1890EA29A6AB7C95E7D7B40 /* Pods_KanbanBoardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KanbanBoardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3313190628CF421A003E55F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1CDF75BDF4F640B32A612E1 /* Pods_KanbanBoard.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3313191628CF421C003E55F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C8E872D86ACCD00A5E32A61 /* Pods_KanbanBoardTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3313192028CF421C003E55F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12FB5AA3C3796C5BE8FF6D1C /* Pods_KanbanBoard_KanbanBoardUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		24B0043D0CE0CE44785A2355 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21DFBC48D3525416C57DB423 /* Pods-KanbanBoard.debug.xcconfig */,
+				2CFB616650E2453ACFF2967F /* Pods-KanbanBoard.release.xcconfig */,
+				91F456DBEB2DFA547C34CCD1 /* Pods-KanbanBoard-KanbanBoardUITests.debug.xcconfig */,
+				AF97A6B251104D9FFF270DE1 /* Pods-KanbanBoard-KanbanBoardUITests.release.xcconfig */,
+				9D1CB411A0062A3E499A8740 /* Pods-KanbanBoardTests.debug.xcconfig */,
+				4655AF5FEDAF3D1F509DD112 /* Pods-KanbanBoardTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3313190028CF421A003E55F9 = {
+			isa = PBXGroup;
+			children = (
+				3313190B28CF421A003E55F9 /* KanbanBoard */,
+				3313191C28CF421C003E55F9 /* KanbanBoardTests */,
+				3313192628CF421C003E55F9 /* KanbanBoardUITests */,
+				3313190A28CF421A003E55F9 /* Products */,
+				24B0043D0CE0CE44785A2355 /* Pods */,
+				B30E08997B135E59E35B74F9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3313190A28CF421A003E55F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3313190928CF421A003E55F9 /* KanbanBoard.app */,
+				3313191928CF421C003E55F9 /* KanbanBoardTests.xctest */,
+				3313192328CF421C003E55F9 /* KanbanBoardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3313190B28CF421A003E55F9 /* KanbanBoard */ = {
+			isa = PBXGroup;
+			children = (
+				334098FC28D30129000125E3 /* Parser */,
+				334098F928D2F3B5000125E3 /* Model */,
+				334098F628D2ED1B000125E3 /* Domain */,
+				3313190C28CF421A003E55F9 /* KanbanBoardApp.swift */,
+				3313190E28CF421A003E55F9 /* ContentView.swift */,
+				3313191028CF421C003E55F9 /* Assets.xcassets */,
+				3313193628CF4455003E55F9 /* GoogleService-Info.plist */,
+				3313191228CF421C003E55F9 /* Preview Content */,
+			);
+			path = KanbanBoard;
+			sourceTree = "<group>";
+		};
+		3313191228CF421C003E55F9 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3313191328CF421C003E55F9 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3313191C28CF421C003E55F9 /* KanbanBoardTests */ = {
+			isa = PBXGroup;
+			children = (
+				334098FF28D30312000125E3 /* Ressources */,
+				3313191D28CF421C003E55F9 /* KanbanBoardTests.swift */,
+			);
+			path = KanbanBoardTests;
+			sourceTree = "<group>";
+		};
+		3313192628CF421C003E55F9 /* KanbanBoardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3313192728CF421C003E55F9 /* KanbanBoardUITests.swift */,
+				3313192928CF421C003E55F9 /* KanbanBoardUITestsLaunchTests.swift */,
+			);
+			path = KanbanBoardUITests;
+			sourceTree = "<group>";
+		};
+		334098F628D2ED1B000125E3 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				334098F728D2ED82000125E3 /* Kanban.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		334098F928D2F3B5000125E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				334098FA28D2F3DE000125E3 /* Columns.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		334098FC28D30129000125E3 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				334098FD28D3013D000125E3 /* JSONDecode.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		334098FF28D30312000125E3 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				3340990028D3034E000125E3 /* KanbanData.json */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		B30E08997B135E59E35B74F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E51F10BDE8B2C43149239870 /* Pods_KanbanBoard.framework */,
+				600F4DB74AA83D1507AA8D97 /* Pods_KanbanBoard_KanbanBoardUITests.framework */,
+				F1890EA29A6AB7C95E7D7B40 /* Pods_KanbanBoardTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3313190828CF421A003E55F9 /* KanbanBoard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3313192D28CF421C003E55F9 /* Build configuration list for PBXNativeTarget "KanbanBoard" */;
+			buildPhases = (
+				32E1D52C91698B07B15283A5 /* [CP] Check Pods Manifest.lock */,
+				3313190528CF421A003E55F9 /* Sources */,
+				3313190628CF421A003E55F9 /* Frameworks */,
+				3313190728CF421A003E55F9 /* Resources */,
+				D298CE9A12E5701DDDE2F407 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KanbanBoard;
+			productName = KanbanBoard;
+			productReference = 3313190928CF421A003E55F9 /* KanbanBoard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3313191828CF421C003E55F9 /* KanbanBoardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3313193028CF421C003E55F9 /* Build configuration list for PBXNativeTarget "KanbanBoardTests" */;
+			buildPhases = (
+				98156C85247464BE65CA0BA1 /* [CP] Check Pods Manifest.lock */,
+				3313191528CF421C003E55F9 /* Sources */,
+				3313191628CF421C003E55F9 /* Frameworks */,
+				3313191728CF421C003E55F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3313191B28CF421C003E55F9 /* PBXTargetDependency */,
+			);
+			name = KanbanBoardTests;
+			productName = KanbanBoardTests;
+			productReference = 3313191928CF421C003E55F9 /* KanbanBoardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3313192228CF421C003E55F9 /* KanbanBoardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3313193328CF421C003E55F9 /* Build configuration list for PBXNativeTarget "KanbanBoardUITests" */;
+			buildPhases = (
+				8C5B3E5876AE9B0505B80E11 /* [CP] Check Pods Manifest.lock */,
+				3313191F28CF421C003E55F9 /* Sources */,
+				3313192028CF421C003E55F9 /* Frameworks */,
+				3313192128CF421C003E55F9 /* Resources */,
+				2226D0377270BF4DD14BD012 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3313192528CF421C003E55F9 /* PBXTargetDependency */,
+			);
+			name = KanbanBoardUITests;
+			productName = KanbanBoardUITests;
+			productReference = 3313192328CF421C003E55F9 /* KanbanBoardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3313190128CF421A003E55F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					3313190828CF421A003E55F9 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					3313191828CF421C003E55F9 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 3313190828CF421A003E55F9;
+					};
+					3313192228CF421C003E55F9 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 3313190828CF421A003E55F9;
+					};
+				};
+			};
+			buildConfigurationList = 3313190428CF421A003E55F9 /* Build configuration list for PBXProject "KanbanBoard" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3313190028CF421A003E55F9;
+			productRefGroup = 3313190A28CF421A003E55F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3313190828CF421A003E55F9 /* KanbanBoard */,
+				3313191828CF421C003E55F9 /* KanbanBoardTests */,
+				3313192228CF421C003E55F9 /* KanbanBoardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3313190728CF421A003E55F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3313191428CF421C003E55F9 /* Preview Assets.xcassets in Resources */,
+				3313191128CF421C003E55F9 /* Assets.xcassets in Resources */,
+				3313193728CF4455003E55F9 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3313191728CF421C003E55F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3340990128D3034E000125E3 /* KanbanData.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3313192128CF421C003E55F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2226D0377270BF4DD14BD012 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KanbanBoard-KanbanBoardUITests/Pods-KanbanBoard-KanbanBoardUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KanbanBoard-KanbanBoardUITests/Pods-KanbanBoard-KanbanBoardUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KanbanBoard-KanbanBoardUITests/Pods-KanbanBoard-KanbanBoardUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32E1D52C91698B07B15283A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KanbanBoard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C5B3E5876AE9B0505B80E11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KanbanBoard-KanbanBoardUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98156C85247464BE65CA0BA1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KanbanBoardTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D298CE9A12E5701DDDE2F407 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KanbanBoard/Pods-KanbanBoard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KanbanBoard/Pods-KanbanBoard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KanbanBoard/Pods-KanbanBoard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3313190528CF421A003E55F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				334098F828D2ED82000125E3 /* Kanban.swift in Sources */,
+				334098FB28D2F3DE000125E3 /* Columns.swift in Sources */,
+				334098FE28D3013D000125E3 /* JSONDecode.swift in Sources */,
+				3313190F28CF421A003E55F9 /* ContentView.swift in Sources */,
+				3313190D28CF421A003E55F9 /* KanbanBoardApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3313191528CF421C003E55F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3313191E28CF421C003E55F9 /* KanbanBoardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3313191F28CF421C003E55F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3313192A28CF421C003E55F9 /* KanbanBoardUITestsLaunchTests.swift in Sources */,
+				3313192828CF421C003E55F9 /* KanbanBoardUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3313191B28CF421C003E55F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3313190828CF421A003E55F9 /* KanbanBoard */;
+			targetProxy = 3313191A28CF421C003E55F9 /* PBXContainerItemProxy */;
+		};
+		3313192528CF421C003E55F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3313190828CF421A003E55F9 /* KanbanBoard */;
+			targetProxy = 3313192428CF421C003E55F9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3313192B28CF421C003E55F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3313192C28CF421C003E55F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3313192E28CF421C003E55F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21DFBC48D3525416C57DB423 /* Pods-KanbanBoard.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"KanbanBoard/Preview Content\"";
+				DEVELOPMENT_TEAM = 2SQXYM72E8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.easysquare.KanbanBoard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3313192F28CF421C003E55F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CFB616650E2453ACFF2967F /* Pods-KanbanBoard.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"KanbanBoard/Preview Content\"";
+				DEVELOPMENT_TEAM = 2SQXYM72E8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.easysquare.KanbanBoard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3313193128CF421C003E55F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D1CB411A0062A3E499A8740 /* Pods-KanbanBoardTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.easysquare.KanbanBoardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KanbanBoard.app/KanbanBoard";
+			};
+			name = Debug;
+		};
+		3313193228CF421C003E55F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4655AF5FEDAF3D1F509DD112 /* Pods-KanbanBoardTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.easysquare.KanbanBoardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KanbanBoard.app/KanbanBoard";
+			};
+			name = Release;
+		};
+		3313193428CF421C003E55F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91F456DBEB2DFA547C34CCD1 /* Pods-KanbanBoard-KanbanBoardUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.easysquare.KanbanBoardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KanbanBoard;
+			};
+			name = Debug;
+		};
+		3313193528CF421C003E55F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF97A6B251104D9FFF270DE1 /* Pods-KanbanBoard-KanbanBoardUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.easysquare.KanbanBoardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KanbanBoard;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3313190428CF421A003E55F9 /* Build configuration list for PBXProject "KanbanBoard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3313192B28CF421C003E55F9 /* Debug */,
+				3313192C28CF421C003E55F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3313192D28CF421C003E55F9 /* Build configuration list for PBXNativeTarget "KanbanBoard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3313192E28CF421C003E55F9 /* Debug */,
+				3313192F28CF421C003E55F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3313193028CF421C003E55F9 /* Build configuration list for PBXNativeTarget "KanbanBoardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3313193128CF421C003E55F9 /* Debug */,
+				3313193228CF421C003E55F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3313193328CF421C003E55F9 /* Build configuration list for PBXNativeTarget "KanbanBoardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3313193428CF421C003E55F9 /* Debug */,
+				3313193528CF421C003E55F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3313190128CF421A003E55F9 /* Project object */;
+}
