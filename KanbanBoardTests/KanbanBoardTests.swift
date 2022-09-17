@@ -143,6 +143,46 @@ class KanbanBoardTests: XCTestCase {
         XCTAssertTrue(columns.delete(delete) == .columnNotFound, "Unexpected result while deleting a non existing column")
         
     }
+    
+    func testMaxCount() {
+        let doIt = Column(headline: "Doit", id: 1, ticketList: [Ticket(id: 0, text: "task 0"), Ticket(id: 1, text: "task 1"), Ticket(id: 2, text: "task 2"), Ticket(id: 6, text: "task 6")], wipLimit: 8)
+        let done = Column(headline: "Done", id: 2, ticketList: [Ticket(id: 3, text: "task 0"), Ticket(id: 4, text: "task 1")], wipLimit: 8)
+        
+        let model = ColumnsViewModel(columns: [doIt, done])
+        
+        XCTAssertTrue(model.maxColCount == 4, "Unexpected maxColCount")
+    }
+    
+    func testViewModel() {
+        let doIt = Column(headline: "Done", id: 1, ticketList: [Ticket(id: 0, text: "task 0"), Ticket(id: 1, text: "task 1"), Ticket(id: 2, text: "task 2"), Ticket(id: 6, text: "task 6")], wipLimit: 8)
+        let done = Column(headline: "Doit", id: 2, ticketList: [Ticket(id: 3, text: "task 0"), Ticket(id: 4, text: "task 1")], wipLimit: 8)
+        
+        let model = ColumnsViewModel(columns: [doIt, done])
+        
+        let data_0 = model.collectionList[0].data
+        let data_1 = model.collectionList[1].data
+        let data_2 = model.collectionList[2].data
+        let data_3 = model.collectionList[3].data
+        let data_4 = model.collectionList[4].data
+        
+        XCTAssertTrue(model.collectionList.count == 5, "Unexpected count")
+        
+        XCTAssertTrue(data_0[0].text == "Done", "wrong text")
+        XCTAssertTrue(data_0[1].text == "Doit", "wrong text")
+        
+        XCTAssertTrue(data_1[0].text == "task 0", "wrong text")
+        XCTAssertTrue(data_1[1].text == "task 0", "wrong text")
+        
+        XCTAssertTrue(data_2[0].text == "task 1", "wrong text")
+        XCTAssertTrue(data_2[1].text == "task 1", "wrong text")
+        
+        XCTAssertTrue(data_3[0].text == "task 2", "wrong text")
+        XCTAssertTrue(data_3[1].text == nil, "wrong text")
+        
+        XCTAssertTrue(data_4[0].text == "task 6", "wrong text")
+        XCTAssertTrue(data_4[1].text == nil, "wrong text")
+        
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.

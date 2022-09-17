@@ -7,21 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12FB5AA3C3796C5BE8FF6D1C /* Pods_KanbanBoard_KanbanBoardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 600F4DB74AA83D1507AA8D97 /* Pods_KanbanBoard_KanbanBoardUITests.framework */; };
 		3313190D28CF421A003E55F9 /* KanbanBoardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3313190C28CF421A003E55F9 /* KanbanBoardApp.swift */; };
-		3313190F28CF421A003E55F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3313190E28CF421A003E55F9 /* ContentView.swift */; };
+		3313190F28CF421A003E55F9 /* KanbanBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3313190E28CF421A003E55F9 /* KanbanBoardView.swift */; };
 		3313191128CF421C003E55F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3313191028CF421C003E55F9 /* Assets.xcassets */; };
 		3313191428CF421C003E55F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3313191328CF421C003E55F9 /* Preview Assets.xcassets */; };
 		3313191E28CF421C003E55F9 /* KanbanBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3313191D28CF421C003E55F9 /* KanbanBoardTests.swift */; };
 		3313192828CF421C003E55F9 /* KanbanBoardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3313192728CF421C003E55F9 /* KanbanBoardUITests.swift */; };
 		3313192A28CF421C003E55F9 /* KanbanBoardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3313192928CF421C003E55F9 /* KanbanBoardUITestsLaunchTests.swift */; };
 		3313193728CF4455003E55F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3313193628CF4455003E55F9 /* GoogleService-Info.plist */; };
+		333D5AFC28D472A500CCA5A4 /* ColumnsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333D5AFB28D472A500CCA5A4 /* ColumnsViewModel.swift */; };
+		333D5AFF28D4E62200CCA5A4 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333D5AFE28D4E62200CCA5A4 /* Notification+Name.swift */; };
+		333D5B0228D4E80600CCA5A4 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333D5B0128D4E80600CCA5A4 /* Constant.swift */; };
 		334098F828D2ED82000125E3 /* Kanban.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334098F728D2ED82000125E3 /* Kanban.swift */; };
 		334098FB28D2F3DE000125E3 /* Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334098FA28D2F3DE000125E3 /* Columns.swift */; };
 		334098FE28D3013D000125E3 /* JSONDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334098FD28D3013D000125E3 /* JSONDecode.swift */; };
 		3340990128D3034E000125E3 /* KanbanData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3340990028D3034E000125E3 /* KanbanData.json */; };
-		6C8E872D86ACCD00A5E32A61 /* Pods_KanbanBoardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1890EA29A6AB7C95E7D7B40 /* Pods_KanbanBoardTests.framework */; };
-		F1CDF75BDF4F640B32A612E1 /* Pods_KanbanBoard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51F10BDE8B2C43149239870 /* Pods_KanbanBoard.framework */; };
+		84BC0584A1B398C7265CB56C /* Pods_KanbanBoard_KanbanBoardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5356A0C6FA3ADBBD7F4C05F2 /* Pods_KanbanBoard_KanbanBoardUITests.framework */; };
+		95067883A31728CC2461F01B /* Pods_KanbanBoardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66B6C550C7D4F1CA9F598B1 /* Pods_KanbanBoardTests.framework */; };
+		C1245D8A29E2AE4DFCAD06D0 /* Pods_KanbanBoard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C14A87C86A28765FD7FE2A /* Pods_KanbanBoard.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		21DFBC48D3525416C57DB423 /* Pods-KanbanBoard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KanbanBoard.debug.xcconfig"; path = "Target Support Files/Pods-KanbanBoard/Pods-KanbanBoard.debug.xcconfig"; sourceTree = "<group>"; };
-		2CFB616650E2453ACFF2967F /* Pods-KanbanBoard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KanbanBoard.release.xcconfig"; path = "Target Support Files/Pods-KanbanBoard/Pods-KanbanBoard.release.xcconfig"; sourceTree = "<group>"; };
 		3313190928CF421A003E55F9 /* KanbanBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KanbanBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3313190C28CF421A003E55F9 /* KanbanBoardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanBoardApp.swift; sourceTree = "<group>"; };
-		3313190E28CF421A003E55F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3313190E28CF421A003E55F9 /* KanbanBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanBoardView.swift; sourceTree = "<group>"; };
 		3313191028CF421C003E55F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3313191328CF421C003E55F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3313191928CF421C003E55F9 /* KanbanBoardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KanbanBoardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,17 +56,22 @@
 		3313192728CF421C003E55F9 /* KanbanBoardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanBoardUITests.swift; sourceTree = "<group>"; };
 		3313192928CF421C003E55F9 /* KanbanBoardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanBoardUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3313193628CF4455003E55F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		333D5AFB28D472A500CCA5A4 /* ColumnsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnsViewModel.swift; sourceTree = "<group>"; };
+		333D5AFE28D4E62200CCA5A4 /* Notification+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
+		333D5B0128D4E80600CCA5A4 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		334098F728D2ED82000125E3 /* Kanban.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kanban.swift; sourceTree = "<group>"; };
 		334098FA28D2F3DE000125E3 /* Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Columns.swift; sourceTree = "<group>"; };
 		334098FD28D3013D000125E3 /* JSONDecode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecode.swift; sourceTree = "<group>"; };
 		3340990028D3034E000125E3 /* KanbanData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KanbanData.json; sourceTree = "<group>"; };
-		4655AF5FEDAF3D1F509DD112 /* Pods-KanbanBoardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KanbanBoardTests.release.xcconfig"; path = "Target Support Files/Pods-KanbanBoardTests/Pods-KanbanBoardTests.release.xcconfig"; sourceTree = "<group>"; };
-		600F4DB74AA83D1507AA8D97 /* Pods_KanbanBoard_KanbanBoardUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KanbanBoard_KanbanBoardUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		91F456DBEB2DFA547C34CCD1 /* Pods-KanbanBoard-KanbanBoardUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KanbanBoard-KanbanBoardUITests.debug.xcconfig"; path = "Target Support Files/Pods-KanbanBoard-KanbanBoardUITests/Pods-KanbanBoard-KanbanBoardUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		9D1CB411A0062A3E499A8740 /* Pods-KanbanBoardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KanbanBoardTests.debug.xcconfig"; path = "Target Support Files/Pods-KanbanBoardTests/Pods-KanbanBoardTests.debug.xcconfig"; sourceTree = "<group>"; };
-		AF97A6B251104D9FFF270DE1 /* Pods-KanbanBoard-KanbanBoardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KanbanBoard-KanbanBoardUITests.release.xcconfig"; path = "Target Support Files/Pods-KanbanBoard-KanbanBoardUITests/Pods-KanbanBoard-KanbanBoardUITests.release.xcconfig"; sourceTree = "<group>"; };
-		E51F10BDE8B2C43149239870 /* Pods_KanbanBoard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KanbanBoard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F1890EA29A6AB7C95E7D7B40 /* Pods_KanbanBoardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KanbanBoardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36F3864A474E337165B734C3 /* Pods-KanbanBoardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KanbanBoardTests.release.xcconfig"; path = "Target Support Files/Pods-KanbanBoardTests/Pods-KanbanBoardTests.release.xcconfig"; sourceTree = "<group>"; };
+		49BB36B6414CE96D3EAB5123 /* Pods-KanbanBoardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KanbanBoardTests.debug.xcconfig"; path = "Target Support Files/Pods-KanbanBoardTests/Pods-KanbanBoardTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5356A0C6FA3ADBBD7F4C05F2 /* Pods_KanbanBoard_KanbanBoardUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KanbanBoard_KanbanBoardUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FD910DB59AA86D03F1CA292 /* Pods-KanbanBoard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KanbanBoard.debug.xcconfig"; path = "Target Support Files/Pods-KanbanBoard/Pods-KanbanBoard.debug.xcconfig"; sourceTree = "<group>"; };
+		70FF29CC28C7F17C0BD917F7 /* Pods-KanbanBoard-KanbanBoardUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KanbanBoard-KanbanBoardUITests.debug.xcconfig"; path = "Target Support Files/Pods-KanbanBoard-KanbanBoardUITests/Pods-KanbanBoard-KanbanBoardUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		89C14A87C86A28765FD7FE2A /* Pods_KanbanBoard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KanbanBoard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B6D81701927704A056D4A30 /* Pods-KanbanBoard-KanbanBoardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KanbanBoard-KanbanBoardUITests.release.xcconfig"; path = "Target Support Files/Pods-KanbanBoard-KanbanBoardUITests/Pods-KanbanBoard-KanbanBoardUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AF88D827E7C47C19B5939F68 /* Pods-KanbanBoard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KanbanBoard.release.xcconfig"; path = "Target Support Files/Pods-KanbanBoard/Pods-KanbanBoard.release.xcconfig"; sourceTree = "<group>"; };
+		C66B6C550C7D4F1CA9F598B1 /* Pods_KanbanBoardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KanbanBoardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1CDF75BDF4F640B32A612E1 /* Pods_KanbanBoard.framework in Frameworks */,
+				C1245D8A29E2AE4DFCAD06D0 /* Pods_KanbanBoard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C8E872D86ACCD00A5E32A61 /* Pods_KanbanBoardTests.framework in Frameworks */,
+				95067883A31728CC2461F01B /* Pods_KanbanBoardTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,22 +95,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12FB5AA3C3796C5BE8FF6D1C /* Pods_KanbanBoard_KanbanBoardUITests.framework in Frameworks */,
+				84BC0584A1B398C7265CB56C /* Pods_KanbanBoard_KanbanBoardUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BCCB88EF3DC3AACBDA72182 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89C14A87C86A28765FD7FE2A /* Pods_KanbanBoard.framework */,
+				5356A0C6FA3ADBBD7F4C05F2 /* Pods_KanbanBoard_KanbanBoardUITests.framework */,
+				C66B6C550C7D4F1CA9F598B1 /* Pods_KanbanBoardTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		24B0043D0CE0CE44785A2355 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				21DFBC48D3525416C57DB423 /* Pods-KanbanBoard.debug.xcconfig */,
-				2CFB616650E2453ACFF2967F /* Pods-KanbanBoard.release.xcconfig */,
-				91F456DBEB2DFA547C34CCD1 /* Pods-KanbanBoard-KanbanBoardUITests.debug.xcconfig */,
-				AF97A6B251104D9FFF270DE1 /* Pods-KanbanBoard-KanbanBoardUITests.release.xcconfig */,
-				9D1CB411A0062A3E499A8740 /* Pods-KanbanBoardTests.debug.xcconfig */,
-				4655AF5FEDAF3D1F509DD112 /* Pods-KanbanBoardTests.release.xcconfig */,
+				5FD910DB59AA86D03F1CA292 /* Pods-KanbanBoard.debug.xcconfig */,
+				AF88D827E7C47C19B5939F68 /* Pods-KanbanBoard.release.xcconfig */,
+				70FF29CC28C7F17C0BD917F7 /* Pods-KanbanBoard-KanbanBoardUITests.debug.xcconfig */,
+				8B6D81701927704A056D4A30 /* Pods-KanbanBoard-KanbanBoardUITests.release.xcconfig */,
+				49BB36B6414CE96D3EAB5123 /* Pods-KanbanBoardTests.debug.xcconfig */,
+				36F3864A474E337165B734C3 /* Pods-KanbanBoardTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -117,7 +133,7 @@
 				3313192628CF421C003E55F9 /* KanbanBoardUITests */,
 				3313190A28CF421A003E55F9 /* Products */,
 				24B0043D0CE0CE44785A2355 /* Pods */,
-				B30E08997B135E59E35B74F9 /* Frameworks */,
+				1BCCB88EF3DC3AACBDA72182 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,11 +150,13 @@
 		3313190B28CF421A003E55F9 /* KanbanBoard */ = {
 			isa = PBXGroup;
 			children = (
+				333D5B0028D4E7EF00CCA5A4 /* Global */,
+				333D5AFD28D4E60400CCA5A4 /* Extension */,
 				334098FC28D30129000125E3 /* Parser */,
 				334098F928D2F3B5000125E3 /* Model */,
 				334098F628D2ED1B000125E3 /* Domain */,
 				3313190C28CF421A003E55F9 /* KanbanBoardApp.swift */,
-				3313190E28CF421A003E55F9 /* ContentView.swift */,
+				3313190E28CF421A003E55F9 /* KanbanBoardView.swift */,
 				3313191028CF421C003E55F9 /* Assets.xcassets */,
 				3313193628CF4455003E55F9 /* GoogleService-Info.plist */,
 				3313191228CF421C003E55F9 /* Preview Content */,
@@ -172,6 +190,22 @@
 			path = KanbanBoardUITests;
 			sourceTree = "<group>";
 		};
+		333D5AFD28D4E60400CCA5A4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				333D5AFE28D4E62200CCA5A4 /* Notification+Name.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		333D5B0028D4E7EF00CCA5A4 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				333D5B0128D4E80600CCA5A4 /* Constant.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
 		334098F628D2ED1B000125E3 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				334098FA28D2F3DE000125E3 /* Columns.swift */,
+				333D5AFB28D472A500CCA5A4 /* ColumnsViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,16 +239,6 @@
 			path = Ressources;
 			sourceTree = "<group>";
 		};
-		B30E08997B135E59E35B74F9 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E51F10BDE8B2C43149239870 /* Pods_KanbanBoard.framework */,
-				600F4DB74AA83D1507AA8D97 /* Pods_KanbanBoard_KanbanBoardUITests.framework */,
-				F1890EA29A6AB7C95E7D7B40 /* Pods_KanbanBoardTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -221,11 +246,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3313192D28CF421C003E55F9 /* Build configuration list for PBXNativeTarget "KanbanBoard" */;
 			buildPhases = (
-				32E1D52C91698B07B15283A5 /* [CP] Check Pods Manifest.lock */,
+				2B1F167E09E3ACA54429B717 /* [CP] Check Pods Manifest.lock */,
 				3313190528CF421A003E55F9 /* Sources */,
 				3313190628CF421A003E55F9 /* Frameworks */,
 				3313190728CF421A003E55F9 /* Resources */,
-				D298CE9A12E5701DDDE2F407 /* [CP] Embed Pods Frameworks */,
+				72B718246B8EA3C55ED986B7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -240,7 +265,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3313193028CF421C003E55F9 /* Build configuration list for PBXNativeTarget "KanbanBoardTests" */;
 			buildPhases = (
-				98156C85247464BE65CA0BA1 /* [CP] Check Pods Manifest.lock */,
+				D4D07FEED5A4345F3BFAF28A /* [CP] Check Pods Manifest.lock */,
 				3313191528CF421C003E55F9 /* Sources */,
 				3313191628CF421C003E55F9 /* Frameworks */,
 				3313191728CF421C003E55F9 /* Resources */,
@@ -259,11 +284,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3313193328CF421C003E55F9 /* Build configuration list for PBXNativeTarget "KanbanBoardUITests" */;
 			buildPhases = (
-				8C5B3E5876AE9B0505B80E11 /* [CP] Check Pods Manifest.lock */,
+				01BA931BAE2BE2003B682880 /* [CP] Check Pods Manifest.lock */,
 				3313191F28CF421C003E55F9 /* Sources */,
 				3313192028CF421C003E55F9 /* Frameworks */,
 				3313192128CF421C003E55F9 /* Resources */,
-				2226D0377270BF4DD14BD012 /* [CP] Embed Pods Frameworks */,
+				573F3A5512BA4A5E8E5E2C03 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -347,46 +372,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2226D0377270BF4DD14BD012 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KanbanBoard-KanbanBoardUITests/Pods-KanbanBoard-KanbanBoardUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KanbanBoard-KanbanBoardUITests/Pods-KanbanBoard-KanbanBoardUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KanbanBoard-KanbanBoardUITests/Pods-KanbanBoard-KanbanBoardUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		32E1D52C91698B07B15283A5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KanbanBoard-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8C5B3E5876AE9B0505B80E11 /* [CP] Check Pods Manifest.lock */ = {
+		01BA931BAE2BE2003B682880 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -408,7 +394,63 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		98156C85247464BE65CA0BA1 /* [CP] Check Pods Manifest.lock */ = {
+		2B1F167E09E3ACA54429B717 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KanbanBoard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		573F3A5512BA4A5E8E5E2C03 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KanbanBoard-KanbanBoardUITests/Pods-KanbanBoard-KanbanBoardUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KanbanBoard-KanbanBoardUITests/Pods-KanbanBoard-KanbanBoardUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KanbanBoard-KanbanBoardUITests/Pods-KanbanBoard-KanbanBoardUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72B718246B8EA3C55ED986B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KanbanBoard/Pods-KanbanBoard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KanbanBoard/Pods-KanbanBoard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KanbanBoard/Pods-KanbanBoard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4D07FEED5A4345F3BFAF28A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -430,23 +472,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D298CE9A12E5701DDDE2F407 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KanbanBoard/Pods-KanbanBoard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KanbanBoard/Pods-KanbanBoard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KanbanBoard/Pods-KanbanBoard-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -456,8 +481,11 @@
 			files = (
 				334098F828D2ED82000125E3 /* Kanban.swift in Sources */,
 				334098FB28D2F3DE000125E3 /* Columns.swift in Sources */,
+				333D5AFF28D4E62200CCA5A4 /* Notification+Name.swift in Sources */,
+				333D5B0228D4E80600CCA5A4 /* Constant.swift in Sources */,
+				333D5AFC28D472A500CCA5A4 /* ColumnsViewModel.swift in Sources */,
 				334098FE28D3013D000125E3 /* JSONDecode.swift in Sources */,
-				3313190F28CF421A003E55F9 /* ContentView.swift in Sources */,
+				3313190F28CF421A003E55F9 /* KanbanBoardView.swift in Sources */,
 				3313190D28CF421A003E55F9 /* KanbanBoardApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -611,7 +639,7 @@
 		};
 		3313192E28CF421C003E55F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21DFBC48D3525416C57DB423 /* Pods-KanbanBoard.debug.xcconfig */;
+			baseConfigurationReference = 5FD910DB59AA86D03F1CA292 /* Pods-KanbanBoard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -626,6 +654,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -641,7 +670,7 @@
 		};
 		3313192F28CF421C003E55F9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CFB616650E2453ACFF2967F /* Pods-KanbanBoard.release.xcconfig */;
+			baseConfigurationReference = AF88D827E7C47C19B5939F68 /* Pods-KanbanBoard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -656,6 +685,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -671,14 +701,14 @@
 		};
 		3313193128CF421C003E55F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D1CB411A0062A3E499A8740 /* Pods-KanbanBoardTests.debug.xcconfig */;
+			baseConfigurationReference = 49BB36B6414CE96D3EAB5123 /* Pods-KanbanBoardTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.easysquare.KanbanBoardTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -691,14 +721,14 @@
 		};
 		3313193228CF421C003E55F9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4655AF5FEDAF3D1F509DD112 /* Pods-KanbanBoardTests.release.xcconfig */;
+			baseConfigurationReference = 36F3864A474E337165B734C3 /* Pods-KanbanBoardTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.easysquare.KanbanBoardTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -711,12 +741,13 @@
 		};
 		3313193428CF421C003E55F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91F456DBEB2DFA547C34CCD1 /* Pods-KanbanBoard-KanbanBoardUITests.debug.xcconfig */;
+			baseConfigurationReference = 70FF29CC28C7F17C0BD917F7 /* Pods-KanbanBoard-KanbanBoardUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.easysquare.KanbanBoardUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -729,12 +760,13 @@
 		};
 		3313193528CF421C003E55F9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF97A6B251104D9FFF270DE1 /* Pods-KanbanBoard-KanbanBoardUITests.release.xcconfig */;
+			baseConfigurationReference = 8B6D81701927704A056D4A30 /* Pods-KanbanBoard-KanbanBoardUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.easysquare.KanbanBoardUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

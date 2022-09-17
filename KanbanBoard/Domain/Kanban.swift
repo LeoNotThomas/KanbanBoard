@@ -11,13 +11,15 @@ import FirebaseDatabase
 
 final class Kanban {
     
-    private var columns: Columns!
+    private (set) var columns: Columns!
     
     private var rawData: Any! {
         didSet {
             if let data = try? JSONSerialization.data(withJSONObject: rawData!) {
                 let decoder = JSONDecoder()
                 columns = try? decoder.decode(Columns.self, from: data)
+                let userInfo = [Constant.UserInfoKey.colums: columns.columns]
+                NotificationCenter.default.post(Notification(name: .kanbanUpdate, userInfo: userInfo))
             }
         }
     }
@@ -32,6 +34,11 @@ final class Kanban {
     
     func initData() {
         database.getData { error, data in
+            if error == nil, let data = data?.value as? Any {
+                self.rawData = data
+            }
+        }
+        database.child("columns").getData { error, data in
             if error == nil, let data = data?.value as? Any {
                 self.rawData = data
             }
