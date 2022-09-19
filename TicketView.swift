@@ -10,14 +10,10 @@ import SwiftUI
 struct TicketView: View {
     @State var model: TicketViewModel
     
-    let width:  CGFloat = 100
-    let height: CGFloat = 100
-    
     var body: some View {
         Text(model.text)
-            .frame(minWidth: width, maxWidth: width, minHeight: height, maxHeight: height)
-            .background(.red)
-            
+            .frame(minWidth: model.width, maxWidth: model.width, minHeight: model.height, maxHeight: model.height)
+            .background(model.color)
     }
 }
 

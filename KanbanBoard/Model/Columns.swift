@@ -124,7 +124,7 @@ struct Column: Codable, Equatable {
 }
 
 // MARK: - TicketList
-struct Ticket: Codable, Equatable {
+struct Ticket: Codable, Hashable {
     
     static func == (lhs: Ticket, rhs: Ticket) -> Bool {
         lhs.id == rhs.id

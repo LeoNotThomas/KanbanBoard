@@ -8,33 +8,34 @@
 import SwiftUI
 
 struct KanbanBoardView: View {
-    
     @ObservedObject var viewModel = ColumnsViewModel(columns: nil)
+//    @State var select: TicketViewModel
     
     var body: some View {
-        Grid() {
-            GridRow {
-                Text("Col 1")
-                Text("Col 2")
-                Text("Col 3")
+        NavigationView {
+            List {
+                Grid() {
+                    ForEach(viewModel.collectionList, id: \.self) { kanbanrow in
+                        GridRow {
+                            ForEach(kanbanrow.data, id: \.self) { ticketModel in
+                                    TicketView(model: ticketModel)
+                            }
+                        }
+                    }
+                }
             }
-            Divider()
-            GridRow {
-                Text("C 1 R 1")
-                Text("C 2 R 1")
-                Text("C 3 R 1")
-            }
-            Divider()
-            GridRow {
-                Text("C 1 R 2")
-                Text("C 2 R 2")
-            }
+            .navigationTitle("Board")
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        KanbanBoardView()
+        let doIt = Column(headline: "Done",     id: 1, ticketList: [Ticket(id: 0, text: "task 0"), Ticket(id: 1, text: "task 1")], wipLimit: 8)
+        let done = Column(headline: "Doit",     id: 2, ticketList: [Ticket(id: 2, text: "task 0"), Ticket(id: 3, text: "task 1")], wipLimit: 8)
+        let prog = Column(headline: "Progress", id: 3, ticketList: [Ticket(id: 4, text: "task 0"), Ticket(id: 5, text: "task 1")], wipLimit: 8)
+        let columns = [doIt, done, prog]
+        var model = ColumnsViewModel(columns: columns)
+        KanbanBoardView(viewModel: model)
     }
 }

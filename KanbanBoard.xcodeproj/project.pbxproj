@@ -16,6 +16,7 @@
 		3313192A28CF421C003E55F9 /* KanbanBoardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3313192928CF421C003E55F9 /* KanbanBoardUITestsLaunchTests.swift */; };
 		3313193728CF4455003E55F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3313193628CF4455003E55F9 /* GoogleService-Info.plist */; };
 		3337403828D84F8F00B0C209 /* TicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3337403728D84F8F00B0C209 /* TicketView.swift */; };
+		3337403C28D8678100B0C209 /* TicketViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3337403B28D8678100B0C209 /* TicketViewDetail.swift */; };
 		333D5AFC28D472A500CCA5A4 /* ColumnsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333D5AFB28D472A500CCA5A4 /* ColumnsViewModel.swift */; };
 		333D5AFF28D4E62200CCA5A4 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333D5AFE28D4E62200CCA5A4 /* Notification+Name.swift */; };
 		333D5B0228D4E80600CCA5A4 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333D5B0128D4E80600CCA5A4 /* Constant.swift */; };
@@ -58,6 +59,7 @@
 		3313192928CF421C003E55F9 /* KanbanBoardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanBoardUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3313193628CF4455003E55F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3337403728D84F8F00B0C209 /* TicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketView.swift; sourceTree = "<group>"; };
+		3337403B28D8678100B0C209 /* TicketViewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewDetail.swift; sourceTree = "<group>"; };
 		333D5AFB28D472A500CCA5A4 /* ColumnsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnsViewModel.swift; sourceTree = "<group>"; };
 		333D5AFE28D4E62200CCA5A4 /* Notification+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
 		333D5B0128D4E80600CCA5A4 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			children = (
 				3313190E28CF421A003E55F9 /* KanbanBoardView.swift */,
 				3337403728D84F8F00B0C209 /* TicketView.swift */,
+				3337403B28D8678100B0C209 /* TicketViewDetail.swift */,
 			);
 			name = View;
 			path = ..;
@@ -494,6 +497,7 @@
 				334098F828D2ED82000125E3 /* Kanban.swift in Sources */,
 				334098FB28D2F3DE000125E3 /* Columns.swift in Sources */,
 				333D5AFF28D4E62200CCA5A4 /* Notification+Name.swift in Sources */,
+				3337403C28D8678100B0C209 /* TicketViewDetail.swift in Sources */,
 				333D5B0228D4E80600CCA5A4 /* Constant.swift in Sources */,
 				333D5AFC28D472A500CCA5A4 /* ColumnsViewModel.swift in Sources */,
 				334098FE28D3013D000125E3 /* JSONDecode.swift in Sources */,
@@ -675,9 +679,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.easysquare.KanbanBoard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -706,9 +713,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.easysquare.KanbanBoard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

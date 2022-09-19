@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 final class ColumnsViewModel: ObservableObject {
     
@@ -91,7 +92,21 @@ final class ColumnsViewModel: ObservableObject {
     }
 }
 
-struct KanbanRow {
+struct KanbanRow: Hashable {
+    
+    static func == (lhs: KanbanRow, rhs: KanbanRow) -> Bool {
+        if lhs.data.count != rhs.data.count {
+            return false
+        }
+        for (index, row) in lhs.data.enumerated() {
+            if let rhsIdx = rhs.data.firstIndex(where: { $0 == row } ), index == rhsIdx {
+                continue
+            }
+            return false
+        }
+        return true
+    }
+    
     var data: [TicketViewModel]
     
     init(data: [TicketViewModel]) {
@@ -105,8 +120,23 @@ enum TicketViewModelType {
     case headline
 }
 
-struct TicketViewModel {
+struct TicketViewModel: Hashable {
+    
+    static func == (lhs: TicketViewModel, rhs: TicketViewModel) -> Bool {
+        return lhs.ticket == rhs.ticket
+    }
+    
     var type: TicketViewModelType
+    var color: Color {
+        if type == .placeholder {
+            return Color.clear
+        }
+        if type == .headline {
+            return Color.blue
+        }
+        return Color.red
+    }
+    
     fileprivate (set) var ticket: Ticket?
     
     var text: String {
@@ -114,5 +144,16 @@ struct TicketViewModel {
             return ticket.text
         }
         return ""
+    }
+    
+    var width: CGFloat {
+        return 100
+    }
+    
+    var height: CGFloat {
+        if type == .headline {
+            return 50
+        }
+        return 100
     }
 }
