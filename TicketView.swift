@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TicketView: View {
-    @State var model: TicketViewModel
+    @ObservedObject var model: TicketViewModel
     
     var body: some View {
         Text(model.text)

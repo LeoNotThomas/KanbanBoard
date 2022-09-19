@@ -11,7 +11,7 @@ import FirebaseDatabase
 
 final class Kanban {
     
-    private (set) var columns: Columns!
+    var columns: Columns!
     
     private var rawData: Any! {
         didSet {
@@ -40,5 +40,20 @@ final class Kanban {
                 print("Error occured loading: \(error)")
             }
         }
+        database.observe(.childChanged) { snapshot, arg  in
+            if let data = try? JSONSerialization.data(withJSONObject: snapshot.value) {
+                let decoder = JSONDecoder()
+                self.columns.columns = try! decoder.decode([Column].self, from: data)
+                let userInfo = [Constant.UserInfoKey.colums: self.columns.columns]
+                NotificationCenter.default.post(Notification(name: .kanbanUpdate, userInfo: userInfo))
+            }
+        }
     }
+    
+    func save(ticket: Ticket) {
+        if let col = columns.column(of: ticket) {
+            database.ref.child("columns/\(col.indexColumn)/ticketList/\(col.indexTicket)/text").setValue(ticket.text)
+        }
+    }
+    
 }

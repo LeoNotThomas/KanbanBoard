@@ -8,18 +8,34 @@
 import SwiftUI
 
 struct TicketViewDetail: View {
-    @State private var ticketText: String
-    private var model: TicketViewModel
+    private var model: TicketViewModel?
+    private var cols = Kanban.shared.columns
+    @State private var text: String
 
     var body: some View {
-        TextEditor(text: $ticketText)
-            .foregroundColor(.secondary)
-            .padding(.horizontal)
+        if let model = model {
+            Text(model.text)
+            TextEditor(text: $text)
+                .foregroundColor(.secondary)
+                .padding(.horizontal)
+            Button("Save") {
+                print("Save the shit")
+                if var ticket = model.ticket, let col = cols?.column(of: ticket) {
+                    ticket.text = text
+                    let result = Kanban.shared.columns.add(ticket, to: col.column)
+                    if result == .success {
+                        Kanban.shared.save(ticket: ticket)
+                    }
+                }
+            }
+        } else {
+            Text("Missing the Model")
+        }
     }
     
-    init(model: TicketViewModel) {
+    init(model: TicketViewModel?) {
         self.model = model
-        self.ticketText = model.text
+        _text = State(initialValue: model?.text ?? "")
     }
 }
 

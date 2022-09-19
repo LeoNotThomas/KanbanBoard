@@ -24,7 +24,10 @@ struct KanbanBoardApp: App {
     
     var body: some Scene {
         WindowGroup {
-            KanbanBoardView()
+            NavigationView {
+                KanbanBoardView()
+                    .navigationTitle("Board")
+            }
         }
     }
 }

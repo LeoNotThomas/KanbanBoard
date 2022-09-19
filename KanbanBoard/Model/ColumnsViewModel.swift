@@ -75,6 +75,10 @@ final class ColumnsViewModel: ObservableObject {
         return count
     }
     
+    var columnsCount: Int {
+        return columns?.count != nil ? columns!.count : 0
+    }
+    
     private func createHeads(columns: [Column]) -> KanbanRow {
         var data = [TicketViewModel]()
         for column in columns {
@@ -120,11 +124,7 @@ enum TicketViewModelType {
     case headline
 }
 
-struct TicketViewModel: Hashable {
-    
-    static func == (lhs: TicketViewModel, rhs: TicketViewModel) -> Bool {
-        return lhs.ticket == rhs.ticket
-    }
+class TicketViewModel: NSObject, ObservableObject {
     
     var type: TicketViewModelType
     var color: Color {
@@ -133,6 +133,9 @@ struct TicketViewModel: Hashable {
         }
         if type == .headline {
             return Color.blue
+        }
+        if isSelected {
+            return Color.gray
         }
         return Color.red
     }
@@ -147,7 +150,7 @@ struct TicketViewModel: Hashable {
     }
     
     var width: CGFloat {
-        return 100
+        return 80
     }
     
     var height: CGFloat {
@@ -155,5 +158,17 @@ struct TicketViewModel: Hashable {
             return 50
         }
         return 100
+    }
+    
+    @Published var isSelected: Bool = false
+    
+    init(model: TicketViewModel) {
+        self.ticket = model.ticket
+        self.type = model.type
+    }
+    
+    init(type: TicketViewModelType, ticket: Ticket? = nil) {
+        self.type = type
+        self.ticket = ticket
     }
 }

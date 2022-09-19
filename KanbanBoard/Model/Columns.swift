@@ -96,7 +96,7 @@ struct Columns: Codable {
         return columns.firstIndex(where: { $0 == of })
     }
     
-    private func column(of: Ticket) -> ColumnTicketIndex? {
+    func column(of: Ticket) -> ColumnTicketIndex? {
         for (idx, column) in columns.enumerated() {
             if let index = column.ticketList.firstIndex(where: { $0 == of }) {
                 return (column: column, indexColumn: idx, indexTicket: index)
@@ -131,5 +131,5 @@ struct Ticket: Codable, Hashable {
     }
     
     let id: Int
-    let text: String
+    var text: String
 }
