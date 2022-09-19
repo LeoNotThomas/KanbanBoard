@@ -36,11 +36,8 @@ final class Kanban {
         database.getData { error, data in
             if error == nil, let data = data?.value as? Any {
                 self.rawData = data
-            }
-        }
-        database.child("columns").getData { error, data in
-            if error == nil, let data = data?.value as? Any {
-                self.rawData = data
+            } else {
+                print("Error occured loading: \(error)")
             }
         }
     }

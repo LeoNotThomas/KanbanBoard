@@ -153,7 +153,7 @@ class KanbanBoardTests: XCTestCase {
         XCTAssertTrue(model.maxColCount == 4, "Unexpected maxColCount")
     }
     
-    func testViewModel() {
+    func testViewModelDifferentRowsInCols() {
         let doIt = Column(headline: "Done", id: 1, ticketList: [Ticket(id: 0, text: "task 0"), Ticket(id: 1, text: "task 1"), Ticket(id: 2, text: "task 2"), Ticket(id: 6, text: "task 6")], wipLimit: 8)
         let done = Column(headline: "Doit", id: 2, ticketList: [Ticket(id: 3, text: "task 0"), Ticket(id: 4, text: "task 1")], wipLimit: 8)
         
@@ -182,6 +182,20 @@ class KanbanBoardTests: XCTestCase {
         XCTAssertTrue(data_4[0].text == "task 6", "wrong text")
         XCTAssertTrue(data_4[1].text == nil, "wrong text")
         
+    }
+    
+    func testViewModelSameRowsInCols() {
+        let doIt = Column(headline: "Done",     id: 1, ticketList: [Ticket(id: 0, text: "task 0"), Ticket(id: 1, text: "task 1")], wipLimit: 8)
+        let done = Column(headline: "Doit",     id: 2, ticketList: [Ticket(id: 2, text: "task 0"), Ticket(id: 3, text: "task 1")], wipLimit: 8)
+        let prog = Column(headline: "Progress", id: 3, ticketList: [Ticket(id: 4, text: "task 0"), Ticket(id: 5, text: "task 1")], wipLimit: 8)
+        
+        let model = ColumnsViewModel(columns: [doIt, done, prog])
+        let row_head = model.collectionList.first
+        let row_first = model.collectionList[1]
+        let row_last = model.collectionList.last
+        
+        XCTAssertTrue(row_head?.data.first?.text == "Done" && row_head?.data[1].text == "Doit" && row_head?.data.last?.text == "Progress", "Unexpected Headlines")
+        XCTAssertTrue(row_first.data.filter( { $0.text == "task 0" } ).count == 3 && row_last?.data.filter( { $0.text == "task 1" } ).count == 3, "Unexpected Row Counts")
     }
 
     func testPerformanceExample() throws {

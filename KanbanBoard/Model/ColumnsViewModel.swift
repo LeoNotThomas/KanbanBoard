@@ -30,7 +30,8 @@ final class ColumnsViewModel: ObservableObject {
         var list = [KanbanRow]()
         if let columns = columns {
             let headline = createHeads(columns: columns)
-            for _ in 1..<maxColCount - 1 {
+            var i = 1
+            repeat {
                 for (_, _) in headline.data.enumerated() {
                     var data = [TicketViewModel]()
                     for column in columns {
@@ -45,12 +46,24 @@ final class ColumnsViewModel: ObservableObject {
                         data.append(model)
                     }
                     let row = KanbanRow(data: data)
-                    list.append(row)
+                    if !emptyRow(row: row) {
+                        list.append(row)
+                    }
                 }
-            }
+                i += 1
+            } while ( i < maxColCount)
             list.insert(headline, at: 0)
         }
         collectionList = list
+    }
+    
+    private func emptyRow(row: KanbanRow) -> Bool {
+        for entry in row.data {
+            if entry.ticket != nil {
+                return false
+            }
+        }
+        return true
     }
     
     var maxColCount: Int {
