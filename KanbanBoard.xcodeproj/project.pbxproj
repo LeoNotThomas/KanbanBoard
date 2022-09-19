@@ -15,6 +15,7 @@
 		3313192828CF421C003E55F9 /* KanbanBoardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3313192728CF421C003E55F9 /* KanbanBoardUITests.swift */; };
 		3313192A28CF421C003E55F9 /* KanbanBoardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3313192928CF421C003E55F9 /* KanbanBoardUITestsLaunchTests.swift */; };
 		3313193728CF4455003E55F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3313193628CF4455003E55F9 /* GoogleService-Info.plist */; };
+		3337403828D84F8F00B0C209 /* TicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3337403728D84F8F00B0C209 /* TicketView.swift */; };
 		333D5AFC28D472A500CCA5A4 /* ColumnsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333D5AFB28D472A500CCA5A4 /* ColumnsViewModel.swift */; };
 		333D5AFF28D4E62200CCA5A4 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333D5AFE28D4E62200CCA5A4 /* Notification+Name.swift */; };
 		333D5B0228D4E80600CCA5A4 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333D5B0128D4E80600CCA5A4 /* Constant.swift */; };
@@ -56,6 +57,7 @@
 		3313192728CF421C003E55F9 /* KanbanBoardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanBoardUITests.swift; sourceTree = "<group>"; };
 		3313192928CF421C003E55F9 /* KanbanBoardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanBoardUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3313193628CF4455003E55F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3337403728D84F8F00B0C209 /* TicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketView.swift; sourceTree = "<group>"; };
 		333D5AFB28D472A500CCA5A4 /* ColumnsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnsViewModel.swift; sourceTree = "<group>"; };
 		333D5AFE28D4E62200CCA5A4 /* Notification+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
 		333D5B0128D4E80600CCA5A4 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -155,8 +157,8 @@
 				334098FC28D30129000125E3 /* Parser */,
 				334098F928D2F3B5000125E3 /* Model */,
 				334098F628D2ED1B000125E3 /* Domain */,
+				3337403628D84F3D00B0C209 /* View */,
 				3313190C28CF421A003E55F9 /* KanbanBoardApp.swift */,
-				3313190E28CF421A003E55F9 /* KanbanBoardView.swift */,
 				3313191028CF421C003E55F9 /* Assets.xcassets */,
 				3313193628CF4455003E55F9 /* GoogleService-Info.plist */,
 				3313191228CF421C003E55F9 /* Preview Content */,
@@ -188,6 +190,16 @@
 				3313192928CF421C003E55F9 /* KanbanBoardUITestsLaunchTests.swift */,
 			);
 			path = KanbanBoardUITests;
+			sourceTree = "<group>";
+		};
+		3337403628D84F3D00B0C209 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3313190E28CF421A003E55F9 /* KanbanBoardView.swift */,
+				3337403728D84F8F00B0C209 /* TicketView.swift */,
+			);
+			name = View;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		333D5AFD28D4E60400CCA5A4 /* Extension */ = {
@@ -485,6 +497,7 @@
 				333D5B0228D4E80600CCA5A4 /* Constant.swift in Sources */,
 				333D5AFC28D472A500CCA5A4 /* ColumnsViewModel.swift in Sources */,
 				334098FE28D3013D000125E3 /* JSONDecode.swift in Sources */,
+				3337403828D84F8F00B0C209 /* TicketView.swift in Sources */,
 				3313190F28CF421A003E55F9 /* KanbanBoardView.swift in Sources */,
 				3313190D28CF421A003E55F9 /* KanbanBoardApp.swift in Sources */,
 			);
@@ -654,7 +667,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -685,7 +698,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

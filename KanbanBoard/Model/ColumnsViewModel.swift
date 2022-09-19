@@ -107,9 +107,12 @@ enum TicketViewModelType {
 
 struct TicketViewModel {
     var type: TicketViewModelType
-    fileprivate var ticket: Ticket?
+    fileprivate (set) var ticket: Ticket?
     
-    var text: String? {
-        return ticket?.text
+    var text: String {
+        if let ticket = ticket {
+            return ticket.text
+        }
+        return ""
     }
 }
