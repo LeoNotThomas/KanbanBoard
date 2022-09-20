@@ -18,12 +18,13 @@ struct KanbanBoardView: View {
                 VStack {
                     HStack(spacing: 1) {
                         ForEach(kanbanrow.data, id: \.self) { model in
-                            TicketView(model: modelWithState(model: model))
+                            TicketView(viewModel: viewModel, model: model)
                                 .gesture(TapGesture()
                                     .onEnded({ _ in
                                         if model.type != .placeholder && model.type != .headline {
-                                            selected = model
-                                            test()
+                                            var selectModel = model
+                                            selectModel.isSelected = true
+                                            viewModel.selectTicket = selectModel
                                             isSelected.toggle()
                                         }
                                     }))
@@ -31,21 +32,15 @@ struct KanbanBoardView: View {
                     }
                     .background(.clear)
                     .sheet(isPresented: $isSelected) {
-                        TicketViewDetail(model: selected)
+                        TicketViewDetail(viewModel: viewModel)
                     }
                 }
             }
         }
     }
     
-    private func test() {
-        isSelected = false
-    }
-    
-    func modelWithState(model: TicketViewModel) -> TicketViewModel {
-        var newModel = TicketViewModel(model: model)
-        newModel.isSelected = model == selected
-        return newModel
+    private func toggleSelect() {
+        isSelected.toggle()
     }
 }
 

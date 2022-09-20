@@ -9,7 +9,6 @@ import Foundation
 import SwiftUI
 
 final class ColumnsViewModel: ObservableObject {
-    
     @Published private (set) var collectionList = [KanbanRow]()
     
     private var columns: [Column]? {
@@ -43,7 +42,10 @@ final class ColumnsViewModel: ObservableObject {
                             continue
                         }
                         let ticket = column.ticketList[idx]
-                        let model = TicketViewModel(type: .ticket, ticket: ticket)
+                        var model = TicketViewModel(type: .ticket, ticket: ticket)
+                        if model == selectTicket {
+                            model.isSelected = true
+                        }
                         data.append(model)
                     }
                     let row = KanbanRow(data: data)
@@ -94,6 +96,56 @@ final class ColumnsViewModel: ObservableObject {
             self.columns = columns
         }
     }
+    
+    var selectTicket: TicketViewModel? {
+        get {
+            for row in collectionList {
+                if let index = row.data.firstIndex(where: { $0.isSelected == true } ) {
+                    return row.data[index]
+                }
+            }
+            return nil
+        }
+        set {
+            if var selectTicket = newValue {
+                var list = collectionList
+                for (rowIdx, row) in collectionList.enumerated() {
+                    if let index = row.data.firstIndex(where: { $0.isSelected == true } ) {
+                        var newRow = row
+                        var newData = row.data
+                        var newModel = newData[index]
+                        newModel.isSelected = false
+                        newData[index] = newModel
+                        newRow.data = newData
+                        list[rowIdx] = newRow
+                    }
+                    let row = list[rowIdx]
+                    if let index = row.data.firstIndex(of: selectTicket) {
+                        var newRow = row
+                        var newData = row.data
+                        var newModel = newData[index]
+                        newModel.isSelected = true
+                        newData[index] = newModel
+                        newRow.data = newData
+                        list[rowIdx] = newRow
+                    }
+                }
+                collectionList = list
+            }
+        }
+    }
+    
+    func currentModel(model: TicketViewModel) -> TicketViewModel? {
+        let result: TicketViewModel? = nil
+        for rows in collectionList {
+            for rowModel in rows.data {
+                if rowModel == model {
+                    return rowModel
+                }
+            }
+        }
+        return result
+    }
 }
 
 struct KanbanRow: Hashable {
@@ -111,6 +163,10 @@ struct KanbanRow: Hashable {
         return true
     }
     
+    func hash(into hasher: inout Hasher) {
+            hasher.combine(data)
+    }
+    
     var data: [TicketViewModel]
     
     init(data: [TicketViewModel]) {
@@ -124,7 +180,19 @@ enum TicketViewModelType {
     case headline
 }
 
-class TicketViewModel: NSObject, ObservableObject {
+struct TicketViewModel: Hashable {
+    static func == (lhs: TicketViewModel, rhs: TicketViewModel) -> Bool {
+        return lhs.ticket == rhs.ticket && lhs.type == rhs.type
+    }
+    
+    func hash(into hasher: inout Hasher) {
+            hasher.combine(ticket)
+            hasher.combine(type)
+    }
+    
+    var id: Int? {
+        return ticket?.id
+    }
     
     var type: TicketViewModelType
     var color: Color {
@@ -160,7 +228,7 @@ class TicketViewModel: NSObject, ObservableObject {
         return 100
     }
     
-    @Published var isSelected: Bool = false
+    var isSelected: Bool = false
     
     init(model: TicketViewModel) {
         self.ticket = model.ticket
