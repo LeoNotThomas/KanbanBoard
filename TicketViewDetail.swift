@@ -11,6 +11,8 @@ struct TicketViewDetail: View {
     private var model: TicketViewModel?
     private var cols = Kanban.shared.columns
     @State private var text: String
+    let bottonColor = Color.gray
+    @Environment(\.dismiss) var dismiss
 
     var body: some View {
         if let model = model {
@@ -19,7 +21,6 @@ struct TicketViewDetail: View {
                 .foregroundColor(.secondary)
                 .padding(.horizontal)
             Button("Save") {
-                print("Save the shit")
                 if var ticket = model.ticket, let col = cols?.column(of: ticket) {
                     ticket.text = text
                     let result = Kanban.shared.columns.add(ticket, to: col.column)
@@ -28,6 +29,13 @@ struct TicketViewDetail: View {
                     }
                 }
             }
+            .background(bottonColor)
+            Spacer()
+            Button("Close") {
+                dismiss()
+            }
+            .background(bottonColor)
+            Spacer()
         } else {
             Text("Missing the Model")
         }

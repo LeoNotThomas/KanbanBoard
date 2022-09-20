@@ -27,14 +27,12 @@ struct KanbanBoardView: View {
                                             isSelected.toggle()
                                         }
                                     }))
-                            NavigationLink("", isActive: $isSelected) {
-                                TicketViewDetail(model: selected)
-                            }
-                            .opacity(0.0)
-                            .buttonStyle(PlainButtonStyle())
                         }
                     }
                     .background(.clear)
+                    .sheet(isPresented: $isSelected) {
+                        TicketViewDetail(model: selected)
+                    }
                 }
             }
         }
