@@ -5,6 +5,9 @@
       location = "group:KanbanBoard.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Submodules">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import 
 
 struct KanbanBoardView: View {
     @ObservedObject var viewModel = ColumnsViewModel(columns: nil)
@@ -41,6 +42,7 @@ struct KanbanBoardView: View {
     
     private func toggleSelect() {
         isSelected.toggle()
+        print()
     }
 }
 
